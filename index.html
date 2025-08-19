@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MotiPix — визуальная соцсеть</title>
+  <meta name="description" content="MotiPix — социальная сеть с визуальным общением стикерами. Магазин, портфолио, группы и плавные анимации." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="header" data-elevate>
+    <div class="container nav">
+      <button class="icon-btn menu-toggle" aria-label="Открыть меню" title="Меню">☰</button>
+      <a href="#/home" class="brand" data-link>
+        <img src="assets/logo.svg" width="24" height="24" alt="MotiPix">
+        <span>Moti<b>Pix</b></span>
+      </a>
+      <nav class="desktop-nav">
+        <a href="#/home" data-link data-i18n="nav.home">Главная</a>
+        <a href="#/about" data-link data-i18n="nav.about">О нас</a>
+        <a href="#/portfolio" data-link data-i18n="nav.portfolio">Портфолио</a>
+        <a href="#/groups" data-link data-i18n="nav.groups">Группы</a>
+        <a href="#/shop" data-link data-i18n="nav.shop">Магазин</a>
+        <a href="#/contacts" data-link data-i18n="nav.contacts">Контакты</a>
+      </nav>
+      <div class="top-actions">
+        <select id="langSwitcher" class="lang" aria-label="Language">
+          <option value="ru">RU</option>
+          <option value="en">EN</option>
+        </select>
+        <button id="loginBtn" class="btn btn-ghost" data-i18n="auth.login">Войти</button>
+        <button id="cartBtn" class="icon-btn cart" aria-label="Корзина">
+          <img src="assets/cart.svg" width="22" height="22" alt="Корзина">
+          <span id="cartCount" class="badge" aria-label="Товаров в корзине">0</span>
+        </button>
+      </div>
+    </div>
+    <aside class="drawer" id="drawer">
+      <button class="icon-btn close-drawer" aria-label="Закрыть">×</button>
+      <a href="#/home" data-link data-i18n="nav.home">Главная</a>
+      <a href="#/about" data-link data-i18n="nav.about">О нас</a>
+      <a href="#/contacts" data-link data-i18n="nav.contacts">Контакты</a>
+      <a href="#/portfolio" data-link data-i18n="nav.portfolio">Портфолио</a>
+      <a href="#/groups" data-link data-i18n="nav.groups">Группы</a>
+      <a href="#/shop" data-link class="accent" data-i18n="nav.shop">Магазин</a>
+    </aside>
+  </header>
+
+  <main id="app" class="app">
+    <section class="page active" data-route="home">
+      <div class="container grid-2 gap-xl pt-xl">
+        <div>
+          <p class="eyebrow" data-animate data-i18n="home.eyebrow">Инновационная социальная сеть</p>
+          <h1 class="h1" data-animate data-i18n="home.title">
+            Поделись эмоциями с помощью <span class="accent">стикеров</span>.
+          </h1>
+          <p class="muted" data-animate data-i18n="home.text">
+            MotiPix — это платформа, где визуальное общение становится языком. Создавайте, покупайте и обменивайте стикеры.
+          </p>
+          <div class="row wrap gap-md" data-animate>
+            <a href="#/shop" class="btn" data-i18n="home.ctaShop"><span class="plus">+</span> Перейти в магазин</a>
+            <a href="#/about" class="btn btn-ghost" data-i18n="home.ctaMore"><span class="plus">+</span> Узнать больше</a>
+          </div>
+        </div>
+        <div class="hero-media" data-animate>
+          <img src="assets/hero.jpg" alt="Планшет со стикером" />
+        </div>
+      </div>
+
+      <div class="container features">
+        <article class="feature" data-animate>
+          <h3 data-i18n="home.f1.title"><span class="plus">+</span> Персонализированные чаты</h3>
+          <p class="muted" data-i18n="home.f1.text">Подбираем стикеры под контекст разговора в реальном времени.</p>
+        </article>
+        <article class="feature" data-animate>
+          <h3 data-i18n="home.f2.title"><span class="plus">+</span> Магазин стикеров</h3>
+          <p class="muted" data-i18n="home.f2.text">Каталог от создателей, подборки и рекомендации.</p>
+        </article>
+        <article class="feature" data-animate>
+          <h3 data-i18n="home.f3.title"><span class="plus">+</span> Рынок стоков</h3>
+          <p class="muted" data-i18n="home.f3.text">Обмен стикерами как активами внутри сообщества.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="page" data-route="about">
+      <div class="container grid-2 gap-xl pt-xl">
+        <div>
+          <h2 class="h2" data-animate data-i18n="about.title">О платформе</h2>
+          <p class="muted" data-animate data-i18n="about.text">
+            MotiPix — социальная сеть, сфокусированная на визуальном общении с использованием графических стикеров. Платформа генерирует стикеры на основе контекста диалога, предлагает магазин и рынок, ориентирована на пользователей до 35 лет.
+          </p>
+          <a class="btn btn-ghost" href="#/contacts" data-animate data-i18n="about.cta"><span class="plus">+</span> Связаться с нами</a>
+        </div>
+        <div class="about-media" data-animate>
+          <img src="assets/about-1.jpg" alt="Иллюстрация стикеров" />
+        </div>
+      </div>
+      <div class="container card table" data-animate>
+        <div class="table-row">
+          <div>
+            <h4 data-i18n="about.t1.title">Персонализация</h4>
+            <p class="muted" data-i18n="about.t1.text">Умные рекомендации.</p>
+          </div>
+          <div>
+            <h4 data-i18n="about.t2.title">Магазин</h4>
+            <p class="muted" data-i18n="about.t2.text">Подборки и скидки.</p>
+          </div>
+          <div>
+            <h4 data-i18n="about.t3.title">Рынок</h4>
+            <p class="muted" data-i18n="about.t3.text">Обмен наклейками как валютой.</p>
+          </div>
+          <div>
+            <h4 data-i18n="about.t4.title">Создатели</h4>
+            <p class="muted" data-i18n="about.t4.text">Монетизация дизайнов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-route="portfolio">
+      <div class="container pt-xl">
+        <h2 class="h2" data-animate data-i18n="portfolio.title">Моё портфолио</h2>
+        <p class="muted" data-animate data-i18n="portfolio.text">Добро пожаловать! Ниже — выборка работ.</p>
+        <div class="gallery" data-animate>
+          <img src="assets/portfolio-1.jpg" alt="Проект 1">
+          <img src="assets/portfolio-2.jpg" alt="Проект 2">
+          <img src="assets/portfolio-3.jpg" alt="Проект 3">
+          <img src="assets/portfolio-4.jpg" alt="Проект 4">
+          <img src="assets/portfolio-5.jpg" alt="Проект 5">
+          <img src="assets/portfolio-6.jpg" alt="Проект 6">
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-route="groups">
+      <div class="container pt-xl">
+        <h2 class="h2" data-animate data-i18n="groups.title">Лента новостей групп</h2>
+        <div id="authNotice" class="notice card" data-animate hidden>
+          <p class="muted" data-i18n="groups.signin">Чтобы общаться с участниками, войдите в аккаунт.</p>
+          <button class="btn" id="openLoginFromNotice" data-i18n="auth.login"><span class="plus">+</span> Войти</button>
+        </div>
+
+        <div class="grid-2 gap-xl">
+          <div class="feed">
+            <article class="post card" data-post-id="1" data-animate>
+              <header class="post-hd">
+                <div class="avatar">S</div>
+                <div>
+                  <div class="author">stanolf231 <span class="verified" title="Verified">✓</span></div>
+                  <div class="muted" data-i18n="groups.inGroup">написал(а) • в группе «Группа сайта MotiPix»</div>
+                </div>
+                <button class="btn btn-ghost join" data-i18n="groups.join"><span class="plus">+</span> Присоединиться</button>
+              </header>
+              <p data-i18n="groups.postText">Добро пожаловать в группу! Общайтесь с участниками, делитесь фотографиями и обновлениями.</p>
+              <footer class="post-ft">
+                <button class="icon-btn like" title="Нравится" aria-label="Нравится">❤</button>
+                <span class="likes" aria-label="Лайков">0</span>
+                <button class="icon-btn comment-toggle" title="Комментировать" aria-label="Комментировать">💬</button>
+                <span class="views" title="Просмотры" data-i18n="groups.views">1 просмотр</span>
+              </footer>
+              <div class="comments" hidden>
+                <ul class="comments-list"></ul>
+                <form class="comment-form" autocomplete="off">
+                  <input name="text" placeholder="Ваш комментарий…" required data-i18n-placeholder="groups.commentPh"/>
+                  <button class="btn" type="submit" data-i18n="groups.send"><span class="plus">+</span> Отправить</button>
+                </form>
+              </div>
+            </article>
+          </div>
+
+          <aside class="card side" data-animate>
+            <div class="row between wrap">
+              <h3 class="h4" data-i18n="groups.recTitle">Рекомендованные группы</h3>
+              <input type="search" placeholder="Поиск" class="search" data-i18n-placeholder="common.search"/>
+            </div>
+            <div class="rec">
+              <div class="rec-item">
+                <img src="assets/about-2.jpg" alt="cover"/>
+                <div>
+                  <b data-i18n="groups.recName">Группа сайта MotiPix</b>
+                  <div class="muted" data-i18n="groups.recUsers">1 пользователь</div>
+                </div>
+                <button class="btn btn-ghost sm" data-i18n="groups.join"><span class="plus">+</span> Присоединиться</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-route="shop">
+      <div class="container pt-xl">
+        <h2 class="h2" data-animate data-i18n="shop.title">Все товары</h2>
+        <p class="muted" data-animate data-i18n="shop.text">Здесь можно рассказать о категориях, скидках и подборках.</p>
+        <div class="shop">
+          <aside class="filters card" data-animate>
+            <h3 class="h4" data-i18n="shop.searchBy">Искать по</h3>
+            <div class="filter">
+              <label data-i18n="shop.category">Категория</label>
+              <select id="filterCategory">
+                <option value="all" data-i18n="shop.all">Все товары</option>
+                <option value="stickers" data-i18n="shop.stickers">Стикеры</option>
+                <option value="marketing" data-i18n="shop.market">Маркетплейс</option>
+                <option value="creators" data-i18n="shop.creators">Создатели</option>
+              </select>
+            </div>
+            <div class="filter">
+              <label data-i18n="shop.price">Цена</label>
+              <input id="priceRange" type="range" min="0" max="200" value="200" />
+              <div class="muted"><span data-i18n="shop.to">До:</span> <span id="priceLabel">200</span> €</div>
+            </div>
+            <div class="filter">
+              <label data-i18n="shop.sort">Сортировка</label>
+              <select id="sortBy">
+                <option value="recommended" data-i18n="shop.recommended">Рекомендуемые</option>
+                <option value="price-asc" data-i18n="shop.asc">Цена: по возрастанию</option>
+                <option value="price-desc" data-i18n="shop.desc">Цена: по убыванию</option>
+              </select>
+            </div>
+          </aside>
+
+          <div class="catalog" id="catalog" data-animate></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" data-route="contacts">
+      <div class="container pt-xl grid-2 gap-xl">
+        <div>
+          <h2 class="h2" data-animate data-i18n="contacts.title">Связаться с нами</h2>
+          <p class="muted" data-animate data-i18n="contacts.text">Оставьте email и сообщение — мы ответим.</p>
+          <form id="contactForm" class="card form" data-animate>
+            <div class="grid-2 gap-md">
+              <label data-i18n="contacts.name">Имя*<input name="first" required></label>
+              <label data-i18n="contacts.last">Фамилия<input name="last"></label>
+            </div>
+            <label data-i18n="contacts.email">Email*<input name="email" type="email" required></label>
+            <label data-i18n="contacts.msg">Сообщение<input name="message" required></label>
+            <button class="btn" type="submit" data-i18n="contacts.send"><span class="plus">+</span> Отправить</button>
+          </form>
+        </div>
+        <div class="about-media" data-animate>
+          <img src="assets/about-3.jpg" alt="Контакты" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container foot">
+      <div class="brand">Moti<b>Pix</b></div>
+      <div class="policies">
+        <a href="#" class="muted" data-i18n="policy.privacy">Политика конфиденциальности</a>
+        <a href="#" class="muted" data-i18n="policy.access">Заявление о доступности</a>
+        <a href="#" class="muted" data-i18n="policy.terms">Правила и условия</a>
+        <a href="#" class="muted" data-i18n="policy.refund">Политика возврата</a>
+        <a href="#" class="muted" data-i18n="policy.shipping">Политика доставки</a>
+      </div>
+      <div class="social">
+        <button class="icon-btn" aria-label="Facebook">f</button>
+        <button class="icon-btn" aria-label="Twitter">x</button>
+        <button class="icon-btn" aria-label="Instagram">◎</button>
+        <button class="icon-btn" aria-label="TikTok">♪</button>
+      </div>
+    </div>
+  </footer>
+
+  <dialog id="loginModal" class="modal">
+    <form method="dialog" class="card modal-card">
+      <h3 class="h4" data-i18n="auth.title">Вход</h3>
+      <p class="muted" data-i18n="auth.desc">Введите никнейм — он сохранится в localStorage/cookie.</p>
+      <input id="loginName" placeholder="Ваш ник" required maxlength="24" data-i18n-placeholder="auth.placeholder"/>
+      <menu class="row gap-sm end">
+        <button class="btn btn-ghost" value="cancel" data-i18n="auth.cancel">Отмена</button>
+        <button class="btn" id="doLogin" value="confirm" data-i18n="auth.login"><span class="plus">+</span> Войти</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
